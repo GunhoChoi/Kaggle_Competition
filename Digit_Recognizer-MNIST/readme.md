@@ -1,6 +1,7 @@
 Digit Recognizer problem from Kaggle(https://www.kaggle.com/c/digit-recognizer)
 
-#<Training Process>
+<Training Process>
+
 1. preprocess data (Pixels & Label)
 
 2. reshape the pixels into 28x28 shape -> [?,28,28,1] 
