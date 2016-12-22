@@ -20,12 +20,12 @@ def max_pool_2x2(x):
 	return tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
 
 with tf.Session() as sess:
-	train_file='/home/gunho/LearnPython/Kaggle/Digit_Recognizer/test.csv'
+	train_file='test.csv'
 	input_data=genfromtxt(train_file, delimiter=',')
 	image=input_data[1:,:].astype("float32")
 
-	saved_model=tf.train.import_meta_graph("/home/gunho/LearnPython/Kaggle/Digit_Recognizer/model/model-1.0.meta")
-	saved_model.restore(sess,"/home/gunho/LearnPython/Kaggle/Digit_Recognizer/model/model-1.0")
+	saved_model=tf.train.import_meta_graph("model/model-1.0.meta")
+	saved_model.restore(sess,"model/model-1.0")
 
 	x =tf.placeholder(tf.float32, shape=[None,784],name='x')
 	y_=tf.placeholder(tf.float32, shape=[None,10],name="y_")
@@ -85,9 +85,9 @@ with tf.Session() as sess:
 		_,result =sess.run([y,correct_prediction],feed_dict=feed_dict)
 
 		'''a=np.array(batch_image[0])
-								a=a.reshape((28,28))
-								plt.imshow(a)
-								plt.show()'''
+			a=a.reshape((28,28))
+			plt.imshow(a)
+			plt.show()'''
 		result_stack.append(int(result))
 
-	np.savetxt("/home/gunho/LearnPython/Kaggle/Digit_Recognizer/result_6layer_1.txt",result_stack,delimiter=",")
+	np.savetxt("result_6layer_1.csv",result_stack,delimiter=",")
