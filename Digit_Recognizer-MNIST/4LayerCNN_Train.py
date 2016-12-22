@@ -107,7 +107,7 @@ with tf.Session() as sess:
 			
 			j+=batch_size
 			if acc>=0.999:
-				saver.save(sess,"model-%s"%acc)
+				saver.save(sess,"model/model-%s"%acc)
 				print("-------over 99.9%-------")
 				print("i: %i"%i)
 				print("error: %f"%error)
