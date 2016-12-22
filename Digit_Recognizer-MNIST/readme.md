@@ -20,6 +20,6 @@ Digit Recognizer problem from Kaggle(https://www.kaggle.com/c/digit-recognizer)
 
  9. Fully connected layer1 [7x7x128(6272) -> 1024]
 
-10.Fully connected layer2 [1024 -> 10]
+ 10.Fully connected layer2 [1024 -> 10]
 
-used ReLU, dropout, AdamOptimizer
+used ReLU, dropout(0.5), AdamOptimizer(1e-3)
