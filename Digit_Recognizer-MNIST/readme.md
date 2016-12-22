@@ -22,4 +22,4 @@ Digit Recognizer problem from Kaggle(https://www.kaggle.com/c/digit-recognizer)
 
  10.Fully connected layer2 [1024 -> 10]
 
-used ReLU, dropout(0.5), AdamOptimizer(1e-3)
+ used ReLU, dropout(0.5), AdamOptimizer(1e-3)
