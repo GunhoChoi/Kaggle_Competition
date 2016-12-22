@@ -1,6 +1,6 @@
 #Digit Recognizer problem from Kaggle
- https://www.kaggle.com/c/digit-recognizer
-
+ https://www.kaggle.com/c/digit-recognizer 를 텐서플로우로 풀어보았다
+ 
 #Training Process
 used ReLU, dropout(0.5), tf.nn.softmax_cross_entropy_with_logits, AdamOptimizer(1e-3)
 
@@ -25,4 +25,4 @@ used ReLU, dropout(0.5), tf.nn.softmax_cross_entropy_with_logits, AdamOptimizer(
 
 10.Fully connected layer2 [1024 -> 10]
 
-텐서플로우로 풀어보았다
+
