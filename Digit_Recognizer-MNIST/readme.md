@@ -1,6 +1,6 @@
 Digit Recognizer problem from Kaggle(https://www.kaggle.com/c/digit-recognizer)
 
-<Training Process>
+#Training Process
 
 1. preprocess data (Pixels & Label)
 
