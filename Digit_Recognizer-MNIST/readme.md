@@ -1,4 +1,5 @@
-Digit Recognizer problem from Kaggle(https://www.kaggle.com/c/digit-recognizer)
+#Digit Recognizer problem from Kaggle
+ https://www.kaggle.com/c/digit-recognizer
 
 #Training Process
 used ReLU, dropout(0.5), tf.nn.softmax_cross_entropy_with_logits, AdamOptimizer(1e-3)
