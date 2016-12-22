@@ -1,8 +1,8 @@
 Digit Recognizer problem from Kaggle(https://www.kaggle.com/c/digit-recognizer)
 
 #Training Process
-
 used ReLU, dropout(0.5), AdamOptimizer(1e-3)
+
 
  1. preprocess data (Pixels & Label)
 
