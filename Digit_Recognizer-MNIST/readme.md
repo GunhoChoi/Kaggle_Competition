@@ -1,5 +1,5 @@
 #Digit Recognizer problem from Kaggle
- https://www.kaggle.com/c/digit-recognizer 를 텐서플로우로 풀어보았다. 정확도가 98.986%가 나왔다. 더 높게 나올 방법에는 뭐가 있을까
+ https://www.kaggle.com/c/digit-recognizer 를 텐서플로우로 풀어보았다. 정확도는 98.986% 더 높게 나올 방법에는 뭐가 있을까?
  
 #Training Process
 used ReLU, dropout(0.5), tf.nn.softmax_cross_entropy_with_logits, AdamOptimizer(1e-3)
