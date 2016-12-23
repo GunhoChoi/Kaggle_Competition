@@ -34,14 +34,14 @@ y_=tf.placeholder(tf.float32, shape=[None,10],name="y_")
 x_image = tf.reshape(x, [-1,28,28,1])
 
 # 1st convolution 3x3 with 16 feature maps
-W_conv1 = weight_variable([3, 3, 1, 16],name="W_conv1")
-b_conv1 = bias_variable([16],name="b_conv1")
+W_conv1 = weight_variable([3, 3, 1, 32],name="W_conv1")
+b_conv1 = bias_variable([32],name="b_conv1")
 
 h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
 
 # 2nd convolution 3x3 with 32 feature maps
-W_conv2 = weight_variable([3, 3, 16, 32],name="W_conv2")
-b_conv2 = bias_variable([32],name="b_conv2")
+W_conv2 = weight_variable([5, 5, 32, 64],name="W_conv2")
+b_conv2 = bias_variable([64],name="b_conv2")
 
 h_conv2 = tf.nn.relu(conv2d(h_conv1, W_conv2) + b_conv2)
 
@@ -49,14 +49,14 @@ h_conv2 = tf.nn.relu(conv2d(h_conv1, W_conv2) + b_conv2)
 h_pool1 = max_pool_2x2(h_conv2)	#28x28 -> 14x14
 
 # 3rd convolution 3x3 with 64 feature maps
-W_conv3 = weight_variable([3, 3, 32, 64],name="W_conv3")
-b_conv3 = bias_variable([64],name="b_conv3")
+W_conv3 = weight_variable([3, 3, 64, 128],name="W_conv3")
+b_conv3 = bias_variable([128],name="b_conv3")
 
 h_conv3 = tf.nn.relu(conv2d(h_pool1, W_conv3) + b_conv3)
 
 # 4th convolution 3x3 with 16 feature maps
-W_conv4 = weight_variable([3, 3, 64, 128],name="W_conv4")
-b_conv4 = bias_variable([128],name="b_conv4")
+W_conv4 = weight_variable([5, 5, 128, 256],name="W_conv4")
+b_conv4 = bias_variable([256],name="b_conv4")
 
 h_conv4 = tf.nn.relu(conv2d(h_conv3, W_conv4) + b_conv4)
 
@@ -64,7 +64,7 @@ h_conv4 = tf.nn.relu(conv2d(h_conv3, W_conv4) + b_conv4)
 h_pool2 = max_pool_2x2(h_conv4)
 
 # Fully connected layer_1 3136 -> 1024
-W_fc1 = weight_variable([7 * 7 * 128, 1024],name="W_fc1")
+W_fc1 = weight_variable([7 * 7 * 256, 1024],name="W_fc1")
 b_fc1 = bias_variable([1024],name="b_fc1")
 
 h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*128]) # 7*7*64 = 3136
