@@ -24,7 +24,5 @@ used ReLU, dropout(0.5), tf.nn.softmax_cross_entropy_with_logits, AdamOptimizer(
  9. Fully connected layer1 [7x7x128(6272) -> 1024]
  
  10. Dropout(0.5)
-
-11.Fully connected layer2 [1024 -> 10]
-
-
+ 
+ 11.Fully connected layer2 [1024 -> 10]
